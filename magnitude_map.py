@@ -83,4 +83,4 @@ class magnitude_map(object):
     def find_cluster(self, v):
         mag_ = self.mag(v)
         most_probable = sorted(self.h.keys(), key=lambda n: abs(n-mag_))[0]
-        return {'key': most_probable, 'cluster_memberts': map(lambda n: n[0], self.h[most_probable])}
+        return {'key': most_probable, 'cluster_members': map(lambda n: n[0], self.h[most_probable])}
